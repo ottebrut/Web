@@ -1,9 +1,18 @@
 :root {
-  --img-width: 50vw;
-  --img-height: 30vw;
   --header-footer-text-color: #1f1f1f;
   --border-color: rgba(52, 52, 52, 0.4);
-  --img-margin: 2.5vw;
+
+  --min-width: 45em;
+  --min-gallery-height: 33em;
+
+  --img-width: 35rem;
+  --img-height: 20rem;
+  --img-margin: 2.2rem;
+
+  --panel-img-height: 25em;
+
+  --first-indent: calc(50vw - 0.5 * var(--img-width));
+  --next-indent: calc(0.8 * var(--img-width) + var(--img-margin));
 }
 
 html {
@@ -12,7 +21,6 @@ html {
 }
 
 body {
-  min-width: 30em;
   margin: 0;
 }
 
@@ -96,7 +104,8 @@ footer {
   overflow: hidden;
 
   width: 100%;
-  min-height: 30em;
+  min-width: var(--min-width);
+  min-height: var(--min-gallery-height);
 }
 
 input {
@@ -107,10 +116,11 @@ input {
   position: relative;
 
   height: var(--img-height);
-  margin: 6.5em 0 2em;
+  margin: calc(50vh - 0.5 * var(--img-height) - 3rem) 0 2rem;
 
   transition: left 0.7s;
 
+  font-size: 0;
   white-space: nowrap;
 }
 
@@ -144,7 +154,7 @@ input {
   width: var(--img-width);
   height: var(--img-height);
 
-  box-shadow: 0.1em 0.1em 2em 0.1em rgba(39, 39, 43, 0.7);
+  box-shadow: 0.1rem 0.1rem 2rem 0.1rem rgba(39, 39, 43, 0.7);
   opacity: 1;
 }
 
@@ -166,10 +176,11 @@ input {
   display: inline-block;
 
   width: 90%;
-  margin-top: calc(0.5 * var(--img-height) - 4vh);
+  height: 1em;
+  margin-top: calc(0.5 * var(--img-height) - 0.5em);
 
   color: white;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .active:hover .active-name {
@@ -207,56 +218,56 @@ input#act-image-12:checked ~ .image-row .active:nth-child(24) {
 }
 
 input#act-image-1:checked ~ .image-row {
-  left: 25vw;
+  left: var(--first-indent);
 }
 
 input#act-image-2:checked ~ .image-row {
-  left: calc(25vw - 42.5vw);
+  left: calc(var(--first-indent) - var(--next-indent));
 }
 
 input#act-image-3:checked ~ .image-row {
-  left: calc(25vw - 2 * 42.5vw);
+  left: calc(var(--first-indent) - 2 * var(--next-indent));
 }
 
 input#act-image-4:checked ~ .image-row {
-  left: calc(25vw - 3 * 42.5vw);
+  left: calc(var(--first-indent) - 3 * var(--next-indent));
 }
 
 input#act-image-5:checked ~ .image-row {
-  left: calc(25vw - 4 * 42.5vw);
+  left: calc(var(--first-indent) - 4 * var(--next-indent));
 }
 
 input#act-image-6:checked ~ .image-row {
-  left: calc(25vw - 5 * 42.5vw);
+  left: calc(var(--first-indent) - 5 * var(--next-indent));
 }
 
 input#act-image-7:checked ~ .image-row {
-  left: calc(25vw - 6 * 42.5vw);
+  left: calc(var(--first-indent) - 6 * var(--next-indent));
 }
 
 input#act-image-8:checked ~ .image-row {
-  left: calc(25vw - 7 * 42.5vw);
+  left: calc(var(--first-indent) - 7 * var(--next-indent));
 }
 
 input#act-image-9:checked ~ .image-row {
-  left: calc(25vw - 8 * 42.5vw);
+  left: calc(var(--first-indent) - 8 * var(--next-indent));
 }
 
 input#act-image-10:checked ~ .image-row {
-  left: calc(25vw - 9 * 42.5vw);
+  left: calc(var(--first-indent) - 9 * var(--next-indent));
 }
 
 input#act-image-11:checked ~ .image-row {
-  left: calc(25vw - 10 * 42.5vw);
+  left: calc(var(--first-indent) - 10 * var(--next-indent));
 }
 
 input#act-image-12:checked ~ .image-row {
-  left: calc(25vw - 11 * 42.5vw);
+  left: calc(var(--first-indent) - 11 * var(--next-indent));
 }
 
 .bubbles {
   position: relative;
-  left: 25vw;
+  left: var(--first-indent);
 
   width: var(--img-width);
 
@@ -297,10 +308,11 @@ input#act-image-12:checked ~ .bubbles .inactive:nth-child(12) .bubble {
   position: absolute;
 
   display: none;
+  overflow: hidden;
 
-  min-width: 40em;
-  height: 100%;
-  min-height: 35em;
+  width: 100%;
+  min-width: var(--min-width);
+  min-height: 100%;
 
   background: rgba(0, 0, 0, 0.88);
 
@@ -312,17 +324,18 @@ input#act-image-12:checked ~ .bubbles .inactive:nth-child(12) .bubble {
 }
 
 .info {
+  overflow: hidden;
+
   width: 80%;
   min-width: 44em;
-  height: 25em;
-  margin: 17vh auto 0;
+  margin: calc(50vh - 0.5 * var(--panel-img-height) - 1.3em) auto 8em;
 }
 
 .panel-image {
   display: inline-block;
 
   width: 60%;
-  height: 100%;
+  height: var(--panel-img-height);
 
   text-align: center;
 }
@@ -343,7 +356,7 @@ input#act-image-12:checked ~ .bubbles .inactive:nth-child(12) .bubble {
 
 .close {
   position: relative;
-  top: -0.23em;
+  top: -0.25em;
   float: right;
 
   color: white;
