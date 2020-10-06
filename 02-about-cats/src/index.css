@@ -1,0 +1,371 @@
+:root {
+  --img-width: 50vw;
+  --img-height: 30vw;
+  --header-footer-text-color: #1f1f1f;
+  --border-color: rgba(52, 52, 52, 0.4);
+  --img-margin: 2.5vw;
+}
+
+html {
+  color: var(--header-footer-text-color);
+  font-family: sans-serif;
+}
+
+body {
+  min-width: 30em;
+  margin: 0;
+}
+
+/* Header */
+header {
+  position: fixed;
+
+  z-index: 1;
+
+  width: 100%;
+  padding: 0.2em 0;
+
+  border-bottom: 1px solid var(--border-color);
+
+  background: white;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+header::first-letter {
+  color: red;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  min-width: 30em;
+  padding: 0.5em 0 0.6em;
+
+  border-top: 1px solid var(--border-color);
+
+  background: white;
+  font-size: 1.1em;
+}
+
+.mails-info {
+  float: left;
+
+  margin-left: 2em;
+}
+
+.mail-address {
+  margin: -0.2em 0 -0.54em;
+}
+
+.mail-address:first-of-type {
+  margin-bottom: -0.7em;
+}
+
+.mail-address::first-letter {
+  width: 5em;
+  height: 1px;
+  padding-right: 0.2em;
+
+  color: var(--header-footer-text-color);
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+.mail-address a {
+  text-decoration: none;
+}
+
+.signature {
+  position: absolute;
+  right: 2em;
+  bottom: 0.6em;
+}
+
+.signature a {
+  text-decoration: none;
+}
+
+/* Gallery */
+.gallery {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 100%;
+  min-height: 30em;
+}
+
+input {
+  display: none;
+}
+
+.image-row {
+  position: relative;
+
+  height: var(--img-height);
+  margin: 6.5em 0 2em;
+
+  transition: left 0.7s;
+
+  white-space: nowrap;
+}
+
+.image-row img {
+  position: relative;
+  bottom: calc(0.1 * var(--img-height));
+
+  width: calc(0.8 * var(--img-width));
+  height: calc(0.8 * var(--img-height));
+
+  cursor: pointer;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.inactive img {
+  margin-right: var(--img-margin);
+}
+
+.active {
+  position: relative;
+
+  display: none;
+
+  margin-right: var(--img-margin);
+}
+
+.active img {
+  bottom: 0;
+
+  width: var(--img-width);
+  height: var(--img-height);
+
+  box-shadow: 0.1em 0.1em 2em 0.1em rgba(39, 39, 43, 0.7);
+  opacity: 1;
+}
+
+.active-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: var(--img-width);
+  height: var(--img-height);
+
+  background: rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.active-text {
+  display: inline-block;
+
+  width: 90%;
+  margin-top: calc(0.5 * var(--img-height) - 4vh);
+
+  color: white;
+  font-size: 3em;
+}
+
+.active:hover .active-name {
+  display: inline-block;
+}
+
+input#act-image-1:checked ~ .image-row .inactive:nth-child(1),
+input#act-image-2:checked ~ .image-row .inactive:nth-child(3),
+input#act-image-3:checked ~ .image-row .inactive:nth-child(5),
+input#act-image-4:checked ~ .image-row .inactive:nth-child(7),
+input#act-image-5:checked ~ .image-row .inactive:nth-child(9),
+input#act-image-6:checked ~ .image-row .inactive:nth-child(11),
+input#act-image-7:checked ~ .image-row .inactive:nth-child(13),
+input#act-image-8:checked ~ .image-row .inactive:nth-child(15),
+input#act-image-9:checked ~ .image-row .inactive:nth-child(17),
+input#act-image-10:checked ~ .image-row .inactive:nth-child(19),
+input#act-image-11:checked ~ .image-row .inactive:nth-child(21),
+input#act-image-12:checked ~ .image-row .inactive:nth-child(23) {
+  display: none;
+}
+
+input#act-image-1:checked ~ .image-row .active:nth-child(2),
+input#act-image-2:checked ~ .image-row .active:nth-child(4),
+input#act-image-3:checked ~ .image-row .active:nth-child(6),
+input#act-image-4:checked ~ .image-row .active:nth-child(8),
+input#act-image-5:checked ~ .image-row .active:nth-child(10),
+input#act-image-6:checked ~ .image-row .active:nth-child(12),
+input#act-image-7:checked ~ .image-row .active:nth-child(14),
+input#act-image-8:checked ~ .image-row .active:nth-child(16),
+input#act-image-9:checked ~ .image-row .active:nth-child(18),
+input#act-image-10:checked ~ .image-row .active:nth-child(20),
+input#act-image-11:checked ~ .image-row .active:nth-child(22),
+input#act-image-12:checked ~ .image-row .active:nth-child(24) {
+  display: inline-block;
+}
+
+input#act-image-1:checked ~ .image-row {
+  left: 25vw;
+}
+
+input#act-image-2:checked ~ .image-row {
+  left: calc(25vw - 42.5vw);
+}
+
+input#act-image-3:checked ~ .image-row {
+  left: calc(25vw - 2 * 42.5vw);
+}
+
+input#act-image-4:checked ~ .image-row {
+  left: calc(25vw - 3 * 42.5vw);
+}
+
+input#act-image-5:checked ~ .image-row {
+  left: calc(25vw - 4 * 42.5vw);
+}
+
+input#act-image-6:checked ~ .image-row {
+  left: calc(25vw - 5 * 42.5vw);
+}
+
+input#act-image-7:checked ~ .image-row {
+  left: calc(25vw - 6 * 42.5vw);
+}
+
+input#act-image-8:checked ~ .image-row {
+  left: calc(25vw - 7 * 42.5vw);
+}
+
+input#act-image-9:checked ~ .image-row {
+  left: calc(25vw - 8 * 42.5vw);
+}
+
+input#act-image-10:checked ~ .image-row {
+  left: calc(25vw - 9 * 42.5vw);
+}
+
+input#act-image-11:checked ~ .image-row {
+  left: calc(25vw - 10 * 42.5vw);
+}
+
+input#act-image-12:checked ~ .image-row {
+  left: calc(25vw - 11 * 42.5vw);
+}
+
+.bubbles {
+  position: relative;
+  left: 25vw;
+
+  width: var(--img-width);
+
+  text-align: center;
+}
+
+.bubble {
+  display: inline-block;
+
+  width: 1em;
+  height: 1em;
+
+  margin: 0 0.2em;
+
+  border-radius: 50%;
+
+  background: grey;
+  opacity: 0.3;
+}
+
+input#act-image-1:checked ~ .bubbles .inactive:nth-child(1) .bubble,
+input#act-image-2:checked ~ .bubbles .inactive:nth-child(2) .bubble,
+input#act-image-3:checked ~ .bubbles .inactive:nth-child(3) .bubble,
+input#act-image-4:checked ~ .bubbles .inactive:nth-child(4) .bubble,
+input#act-image-5:checked ~ .bubbles .inactive:nth-child(5) .bubble,
+input#act-image-6:checked ~ .bubbles .inactive:nth-child(6) .bubble,
+input#act-image-7:checked ~ .bubbles .inactive:nth-child(7) .bubble,
+input#act-image-8:checked ~ .bubbles .inactive:nth-child(8) .bubble,
+input#act-image-9:checked ~ .bubbles .inactive:nth-child(9) .bubble,
+input#act-image-10:checked ~ .bubbles .inactive:nth-child(10) .bubble,
+input#act-image-11:checked ~ .bubbles .inactive:nth-child(11) .bubble,
+input#act-image-12:checked ~ .bubbles .inactive:nth-child(12) .bubble {
+  opacity: 0.9;
+}
+
+/* Panels */
+.panel {
+  position: absolute;
+
+  display: none;
+
+  min-width: 40em;
+  height: 100%;
+  min-height: 35em;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  color: white;
+}
+
+.panel:target {
+  display: block;
+}
+
+.info {
+  width: 80%;
+  min-width: 44em;
+  height: 25em;
+  margin: 17vh auto 0;
+}
+
+.panel-image {
+  display: inline-block;
+
+  width: 60%;
+  height: 100%;
+
+  text-align: center;
+}
+
+.panel-image img {
+  width: 100%;
+  max-width: 50em;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.description {
+  float: right;
+
+  width: 35%;
+}
+
+.close {
+  position: relative;
+  top: -0.23em;
+  float: right;
+
+  color: white;
+  font-size: 3em;
+  text-align: right;
+  text-decoration: none;
+}
+
+.description-text {
+  display: block;
+
+  margin-top: 2.5em;
+
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.panel-name {
+  display: block;
+
+  margin-bottom: 0.8em;
+
+  font-size: 2em;
+  font-weight: normal;
+}
