@@ -1,9 +1,10 @@
 :root {
+  --backround-color: white;
   --header-footer-text-color: #1f1f1f;
   --border-color: rgba(52, 52, 52, 0.4);
 
   --min-width: 45em;
-  --min-gallery-height: 33em;
+  --min-gallery-height: 37em;
 
   --img-width: 35rem;
   --img-height: 20rem;
@@ -16,6 +17,7 @@
 }
 
 html {
+  background: var(--backround-color);
   color: var(--header-footer-text-color);
   font-family: sans-serif;
 }
@@ -35,13 +37,15 @@ header {
 
   border-bottom: 1px solid var(--border-color);
 
-  background: white;
+  background: var(--backround-color);
   font-size: 2.5em;
   text-align: center;
 }
 
 header::first-letter {
   color: red;
+  font-family: "'Courier 10 Pitch'", serif;
+  font-size: 1.3em;
 }
 
 /* Footer */
@@ -55,7 +59,7 @@ footer {
 
   border-top: 1px solid var(--border-color);
 
-  background: white;
+  background: var(--backround-color);
   font-size: 1.1em;
 }
 
@@ -116,7 +120,7 @@ input {
   position: relative;
 
   height: var(--img-height);
-  margin: calc(50vh - 0.5 * var(--img-height) - 3rem) 0 2rem;
+  margin: max(6rem, calc(50vh - 0.5 * var(--img-height) - 3rem)) 0 2rem;
 
   transition: left 0.7s;
 
@@ -179,7 +183,7 @@ input {
   height: 1em;
   margin-top: calc(0.5 * var(--img-height) - 0.5em);
 
-  color: white;
+  color: var(--backround-color);
   font-size: 3rem;
 }
 
@@ -307,20 +311,26 @@ input#act-image-12:checked ~ .bubbles .inactive:nth-child(12) .bubble {
 .panel {
   position: absolute;
 
-  display: none;
+  visibility: hidden;
+
   overflow: hidden;
 
   width: 100%;
   min-width: var(--min-width);
   min-height: 100%;
 
-  background: rgba(0, 0, 0, 0.88);
+  transition: background-color 0.5s;
 
+  background: rgba(0, 0, 0, 0);
   color: white;
+  opacity: 0;
 }
 
 .panel:target {
-  display: block;
+  visibility: visible;
+
+  background: rgba(0, 0, 0, 0.88);
+  opacity: 1;
 }
 
 .info {
@@ -329,6 +339,14 @@ input#act-image-12:checked ~ .bubbles .inactive:nth-child(12) .bubble {
   width: 80%;
   min-width: 44em;
   margin: calc(50vh - 0.5 * var(--panel-img-height) - 1.3em) auto 8em;
+
+  transition: opacity 1s;
+
+  opacity: 0;
+}
+
+.panel:target .info {
+  opacity: 1;
 }
 
 .panel-image {
@@ -363,6 +381,12 @@ input#act-image-12:checked ~ .bubbles .inactive:nth-child(12) .bubble {
   font-size: 3em;
   text-align: right;
   text-decoration: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .description-text {
