@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fc77b8b-caeb-4a61-9bdb-7999df4095d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../02-about-cats/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../02-about-cats/src/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="1fc77b8b-caeb-4a61-9bdb-7999df4095d1" name="Default Changelist" comment="web" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,12 +103,35 @@
       <workItem from="1602091573293" duration="7009000" />
       <workItem from="1602104181459" duration="1776000" />
       <workItem from="1602165859306" duration="1454000" />
-      <workItem from="1602177966267" duration="13000" />
+      <workItem from="1602177966267" duration="247000" />
     </task>
+    <task id="LOCAL-00001" summary="web">
+      <created>1602178114164</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602178114164</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="web" />
+    <option name="LAST_COMMIT_MESSAGE" value="web" />
   </component>
   <component name="WindowStateProjectService">
     <state x="114" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601716165257">
@@ -171,10 +210,18 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="168" y="27" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1601716813109" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602178120494">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1602178120494" />
     <state width="649" height="371" key="XDebugger.FullValuePopup" timestamp="1602102424242">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state width="649" height="371" key="XDebugger.FullValuePopup/67.27.1299.741@67.27.1299.741" timestamp="1602102424242" />
+    <state x="482" y="98" width="293" height="566" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1602178040230">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="482" y="98" width="293" height="566" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/67.27.1299.741@67.27.1299.741" timestamp="1602178040230" />
     <state x="399" y="203" width="550" height="377" key="jetbrains.nodejs.interpreters-dialog" timestamp="1601716636193">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
