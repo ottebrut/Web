@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-about-cats</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />
+  </head>
+  <body>
+    <header>
+      Мурашки
+    </header>
+
+    <main>
+      <input type="radio" name="breed" id="radio-all" checked />
+      <input type="radio" name="breed" id="radio-winter" />
+      <input type="radio" name="breed" id="radio-spring" />
+      <input type="radio" name="breed" id="radio-summer" />
+      <input type="radio" name="breed" id="radio-autumn" />
+      <input type="radio" name="breed" id="radio-angry" />
+
+      <aside class="filter">
+        <div class="age">
+          <h2 class="filter-title">Возраст</h2>
+          <label><input type="range" class="age-slider"></label>
+          <span class="age-range">От 2 до 4 месяцев</span>
+        </div>
+
+        <div class="breed">
+          <h2 class="filter-title">Порода</h2>
+          <label class="filter-label" id="button-all" for="radio-all">
+            <span class="filter-item">Все</span>
+          </label>
+          <label class="filter-label" id="button-winter" for="radio-winter">
+            <span class="filter-item">Зимняя</span>
+          </label>
+          <label class="filter-label" id="button-spring" for="radio-spring">
+            <span class="filter-item">Весенняя</span>
+          </label>
+          <label class="filter-label" id="button-summer" for="radio-summer">
+            <span class="filter-item">Летняя</span>
+          </label>
+          <label class="filter-label" id="button-autumn" for="radio-autumn">
+            <span class="filter-item">Осенняя</span>
+          </label>
+          <label class="filter-label" id="button-angry" for="radio-angry">
+            <span class="filter-item">Всадник апокалипсиса</span>
+          </label>
+        </div>
+      </aside>
+
+      <div class="panels">
+        <section class="panel winter">
+          <a href="#"><img src="img/1.jpg" alt="Январская" /></a>
+          <div class="info">
+            <a class="name" href="#">Январская</a>
+            <p class="short-description">
+              Возраст: 1 месяц<br />
+              Порода: зимняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Эти кошки обладают подвижной мимикой морды, часто общаясь с человеком они хмурят брови
+            или прищуривают глаза, могут копировать выражение лица хозяина, что делает общение с
+            этими кошками забавным и увлекательным. Создается впечатление, что они полностью
+            понимают, о чем с ними говорят.
+          </p>
+        </section>
+
+        <section class="panel winter">
+          <a href="#"><img src="img/2.jpg" alt="Февральская" /></a>
+          <div class="info">
+            <a class="name" href="#">Февральская</a>
+            <p class="short-description">
+              Возраст: 2 месяца<br />
+              Порода: зимняя<br />
+              Болезни: простуда<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            В характере сибирской кошки чувствуются ее дикие предки, жившие в лесах и степях Сибири.
+            Благодаря своим диким корням, сибирские кошки обладают отличными охотничьими навыками,
+            поэтому людям, имеющим частные дома эта кошка принесет много пользы в борьбе с
+            грызунами.
+          </p>
+        </section>
+
+        <section class="panel spring">
+          <a href="#"><img src="img/3.jpg" alt="Мартовская"/></a>
+          <div class="info">
+            <a class="name" href="#">Мартовская</a>
+            <p class="short-description">
+              Возраст: 3 месяца<br />
+              Порода: весенняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Характер кошек активный, игривый, неугомонный. Многие владельцы кошек- немецких рексов
+            подтверждают, что эти питомцы не сидят на месте, постоянно двигаются. У кошек часто
+            отличное настроение, они всегда находят для себя интересные занятия.
+          </p>
+        </section>
+
+        <section class="panel spring">
+          <a href="#"><img src="img/4.jpg" alt="Апрельская"/></a>
+          <div class="info">
+            <a class="name" href="#">Апрельская</a>
+            <p class="short-description">
+              Возраст: 4 месяца<br />
+              Порода: весенняя<br />
+              Болезни: аллергия<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Нежные эти кошки не только на ощупь. Характер у них такой же мягкий, как и их уникальная
+            шерстка. Это общительные деликатные кошки, которые всегда будут рядом с хозяином, не
+            доставляя ему хлопот и не мешая. Они любят находиться рядом с хозяином, сидеть на его
+            коленях, бегать за ним, сопровождая везде.
+          </p>
+        </section>
+
+        <section class="panel spring">
+          <a href="#"><img src="img/5.jpg" alt="Майская"/></a>
+          <div class="info">
+            <a class="name" href="#">Майская</a>
+            <p class="short-description">
+              Возраст: 5 месяцев<br />
+              Порода: весенняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Как и все голые кошки левкои очень миролюбивые и дружелюбные, прекрасно уживаются со
+            всеми жителями квартиры будь то взрослые, пожилые люди, малые дети или домашние питомцы.
+            Им совершенно чужда агрессия, они любят играть и общаться, не могут подолгу быть в
+            одиночестве.
+          </p>
+        </section>
+
+        <section class="panel summer">
+          <a href="#"><img src="img/6.jpg" alt="Июньская"/></a>
+          <div class="info">
+            <a class="name" href="#">Июньская</a>
+            <p class="short-description">
+              Возраст: 6 месяцев<br />
+              Порода: летняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Что касается характера длинношерстной кошки, то и здесь возможны совершенно разные
+            варианты, но многое зависит и от социализации животного, насколько оно приспособлено к
+            совместной жизни с человеком, не боится его, легко уживается вместе.
+          </p>
+        </section>
+
+        <section class="panel summer">
+          <a href="#"><img src="img/7.jpg" alt="Июльская"/></a>
+          <div class="info">
+            <a class="name" href="#">Июльская</a>
+            <p class="short-description">
+              Возраст: 7 месяцев<br />
+              Порода: летняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Кошки американской короткошерстной породы самостоятельны, они не станут бегать за Вами
+            по пятам, им достаточно просто быть где-то рядом с Вами. Они прекрасно приспосабливаются
+            к новым условиям, имеют тихий приятный голос, не прочь поиграть.
+          </p>
+        </section>
+
+        <section class="panel summer angry">
+          <a href="#"><img src="img/8.jpg" alt="Августовская"/></a>
+          <div class="info">
+            <a class="name" href="#">Августовская</a>
+            <p class="short-description">
+              Возраст: 8 месяцев<br />
+              Порода: летняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Азиатские кошки отличаются своим спокойным и ласковым характером. Им не требуется выгул
+            на улицу, достаточно организовать в Вашей квартире спокойный, теплый и уютный уголок,
+            где кошка могла бы отдыхать, нежась на мягкой лежанке.
+          </p>
+        </section>
+
+        <section class="panel autumn">
+          <a href="#"><img src="img/9.jpg" alt="Сентябрьская"/></a>
+          <div class="info">
+            <a class="name" href="#">Сентябрьская</a>
+            <p class="short-description">
+              Возраст: 9 месяцев<br />
+              Порода: осенняя<br />
+              Болезни: меланхолия<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Той-ботейлы – это миниатюрные, юркие, активные и веселые кошки. Они любят внимание, а
+            потому очень общительные. Той-ботейлы любопытны и сообразительны, их привлекает все
+            новое. Им тяжело быть в одиночестве, поэтому желательно, чтобы в Вашем доме был всегда
+            кто-то, с кем он сможет поиграть.
+          </p>
+        </section>
+
+        <section class="panel autumn">
+          <a href="#"><img src="img/10.jpg" alt="Октбярьская"/></a>
+          <div class="info">
+            <a class="name" href="#">Октябрьская</a>
+            <p class="short-description">
+              Возраст: 10 месяцев<br />
+              Порода: осенняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            По характеру тихими этих кошек не назовешь. Активные, энергичные и темпераментные кошки
+            отлично подходят для жизни в городской квартире. Будет прекрасно если семья, в которой
+            они будут жить окажется большой, они отлично ладят с детьми, не прочь поиграть и
+            пошалить со всеми.
+          </p>
+        </section>
+
+        <section class="panel autumn">
+          <a href="#"><img src="img/11.jpeg" alt="Ноябрьская"/></a>
+          <div class="info">
+            <a class="name" href="#">Ноябрьская</a>
+            <p class="short-description">
+              Возраст: 11 месяцев<br />
+              Порода: осенняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Характер рагамаффинов спокойный и уравновешенный, кошки не склонны к проявлению
+            агрессии, прекрасно уживаются с людьми, не капризны. Очень ласковые и нежные кошки,
+            любят быть на руках. Сообразительные, легко усваивают правила поведения, выполняют
+            команды, поддаются дрессировке.
+          </p>
+        </section>
+
+        <section class="panel winter">
+          <a href="#"><img src="img/12.jpg" alt="Декабрьская"/></a>
+          <div class="info">
+            <a class="name" href="#">Декабрьская</a>
+            <p class="short-description">
+              Возраст: 12 месяцев<br />
+              Порода: зимняя<br />
+              Болезни: нет<br />
+            </p>
+            <p class="status">Статус: ищет хозяина</p>
+          </div>
+          <p class="long-description">
+            Мягкий, теплый и пушистый внешний вид прекрасно гармонирует с ласковым и любвеобильным
+            характером богемских рексов. Крупное массивное телосложение идеально сочетается с
+            миролюбивым и спокойным нравом этих животные, кошкам чужда агрессивность и нервозность,
+            это мягкие, добрые и милые существа.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <section class="footer-info">
+        <address class="email-info">
+          Напишите нам:
+          <a href="#" class="email">babulya@prigotovila.pokushat</a>
+          <a href="#" class="email">mmm@kak.vkusno</a>
+        </address>
+        <span class="copyright">
+          <span class="copyright-info">
+            &copy; 2018 ООО &laquo;<a href="#">Позвони своей бабушке</a>&raquo;
+          </span>
+        </span>
+      </section>
+    </footer>
+  </body>
+</html>
