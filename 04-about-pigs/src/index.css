@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+}
+
+header {
+  z-index: 10;
+
+  padding: 0.25em;
+
+  background-color: #509a43;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Main */
+.container {
+  position: relative;
+
+  overflow-x: hidden;
+
+  height: calc(67vh + 1.3em + 100px);
+  padding-top: 1.5em;
+}
+
+.pigs {
+  position: relative;
+
+  width: 90%;
+  max-width: 540px;
+  margin: auto;
+}
+
+input {
+  display: none;
+}
+
+.pig-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  visibility: hidden;
+
+  width: 100%;
+}
+
+.pig-info:nth-of-type(1) {
+  z-index: 8;
+
+  visibility: visible;
+}
+
+.pig-info:nth-of-type(2) {
+  z-index: 7;
+}
+
+.pig-info:nth-of-type(3) {
+  z-index: 6;
+}
+
+.pig-info:nth-of-type(4) {
+  z-index: 5;
+}
+
+.pig-info:nth-of-type(5) {
+  z-index: 4;
+}
+
+.pig-info:nth-of-type(6) {
+  z-index: 3;
+}
+
+.pig-info:nth-of-type(7) {
+  z-index: 2;
+}
+
+.pig-info:nth-of-type(8) {
+  z-index: 1;
+}
+
+/* pig-info styles */
+.image {
+  position: relative;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.image img {
+  width: 100%;
+  height: 67vh;
+
+  border-radius: 1em;
+
+  object-fit: cover;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0.5em;
+  left: min(0.5em, 5vw);
+
+  color: white;
+  font-size: 2.2em;
+  text-shadow: 0 0 0.18em black;
+}
+
+.age {
+  font-size: 0.7em;
+}
+
+@media screen and (min-width: 400px) {
+  .image-info {
+    font-size: 2.7em;
+  }
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 1.3em;
+}
+
+.action-button {
+  width: 4rem;
+
+  border: none;
+  border-radius: 25%;
+
+  transition: box-shadow 0.05s;
+
+  background-color: white;
+  box-shadow: 0 0 1rem 0.15rem rgba(42, 41, 41, 0.7);
+  color: var(--button-color);
+  cursor: pointer;
+  font-size: 3.2em;
+  outline: none;
+  text-align: center;
+}
+
+.image img,
+.action-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.action-button label {
+  cursor: pointer;
+}
+
+.action-button:active {
+  box-shadow: 0 0 1rem 0.1rem rgba(42, 41, 41, 0.3);
+}
+
+.dislike {
+  --button-color: rgba(217, 76, 50, 0.95);
+}
+
+.super-like {
+  --button-color: white;
+  border: none;
+
+  background-color: rgb(42, 41, 41);
+}
+
+.like {
+  --button-color: #509a43;
+}
+
+@media screen and (min-width: 400px) {
+  .action-button {
+    width: 4.8rem;
+    padding-top: 0.1rem;
+
+    font-size: 3.9rem;
+  }
+}
+
+/* Removing pig-info */
+#dislike-1-image:checked ~ .pig-info:nth-of-type(2),
+#super-like-1-image:checked ~ .pig-info:nth-of-type(2),
+#like-1-image:checked ~ .pig-info:nth-of-type(2),
+#dislike-2-image:checked ~ .pig-info:nth-of-type(3),
+#super-like-2-image:checked ~ .pig-info:nth-of-type(3),
+#like-2-image:checked ~ .pig-info:nth-of-type(3),
+#dislike-3-image:checked ~ .pig-info:nth-of-type(4),
+#super-like-3-image:checked ~ .pig-info:nth-of-type(4),
+#like-3-image:checked ~ .pig-info:nth-of-type(4),
+#dislike-4-image:checked ~ .pig-info:nth-of-type(5),
+#super-like-4-image:checked ~ .pig-info:nth-of-type(5),
+#like-4-image:checked ~ .pig-info:nth-of-type(5),
+#dislike-5-image:checked ~ .pig-info:nth-of-type(6),
+#super-like-5-image:checked ~ .pig-info:nth-of-type(6),
+#like-5-image:checked ~ .pig-info:nth-of-type(6),
+#dislike-6-image:checked ~ .pig-info:nth-of-type(7),
+#super-like-6-image:checked ~ .pig-info:nth-of-type(7),
+#like-6-image:checked ~ .pig-info:nth-of-type(7),
+#dislike-7-image:checked ~ .pig-info:nth-of-type(8),
+#super-like-7-image:checked ~ .pig-info:nth-of-type(8),
+#like-7-image:checked ~ .pig-info:nth-of-type(8) {
+  visibility: visible;
+}
+
+#dislike-1-image:checked ~ .pig-info:nth-of-type(1),
+#dislike-2-image:checked ~ .pig-info:nth-of-type(2),
+#dislike-3-image:checked ~ .pig-info:nth-of-type(3),
+#dislike-4-image:checked ~ .pig-info:nth-of-type(4),
+#dislike-5-image:checked ~ .pig-info:nth-of-type(5),
+#dislike-6-image:checked ~ .pig-info:nth-of-type(6),
+#dislike-7-image:checked ~ .pig-info:nth-of-type(7) {
+  top: min(-30em, -40vw);
+  left: min(-25em, -100vw);
+
+  transition: all 1s ease-in-out;
+  transform: rotate(-45deg);
+}
+
+#super-like-1-image:checked ~ .pig-info:nth-of-type(1),
+#super-like-2-image:checked ~ .pig-info:nth-of-type(2),
+#super-like-3-image:checked ~ .pig-info:nth-of-type(3),
+#super-like-4-image:checked ~ .pig-info:nth-of-type(4),
+#super-like-5-image:checked ~ .pig-info:nth-of-type(5),
+#super-like-6-image:checked ~ .pig-info:nth-of-type(6),
+#super-like-7-image:checked ~ .pig-info:nth-of-type(7) {
+  top: min(-40em, -40vw);
+
+  transition: all 1s ease-in-out;
+}
+
+#like-1-image:checked ~ .pig-info:nth-of-type(1),
+#like-2-image:checked ~ .pig-info:nth-of-type(2),
+#like-3-image:checked ~ .pig-info:nth-of-type(3),
+#like-4-image:checked ~ .pig-info:nth-of-type(4),
+#like-5-image:checked ~ .pig-info:nth-of-type(5),
+#like-6-image:checked ~ .pig-info:nth-of-type(6),
+#like-7-image:checked ~ .pig-info:nth-of-type(7) {
+  top: min(-30em, -40vw);
+  left: max(25em, 80vw);
+
+  transition: all 1s ease-in-out;
+  transform: rotate(45deg);
+}
+
+#dislike-1-image:checked ~ .pig-info:nth-of-type(1) .buttons,
+#super-like-1-image:checked ~ .pig-info:nth-of-type(1) .buttons,
+#like-1-image:checked ~ .pig-info:nth-of-type(1) .buttons,
+#dislike-2-image:checked ~ .pig-info:nth-of-type(2) .buttons,
+#super-like-2-image:checked ~ .pig-info:nth-of-type(2) .buttons,
+#like-2-image:checked ~ .pig-info:nth-of-type(2) .buttons,
+#dislike-3-image:checked ~ .pig-info:nth-of-type(3) .buttons,
+#super-like-3-image:checked ~ .pig-info:nth-of-type(3) .buttons,
+#like-3-image:checked ~ .pig-info:nth-of-type(3) .buttons,
+#dislike-4-image:checked ~ .pig-info:nth-of-type(4) .buttons,
+#super-like-4-image:checked ~ .pig-info:nth-of-type(4) .buttons,
+#like-4-image:checked ~ .pig-info:nth-of-type(4) .buttons,
+#dislike-5-image:checked ~ .pig-info:nth-of-type(5) .buttons,
+#super-like-5-image:checked ~ .pig-info:nth-of-type(5) .buttons,
+#like-5-image:checked ~ .pig-info:nth-of-type(5) .buttons,
+#dislike-6-image:checked ~ .pig-info:nth-of-type(6) .buttons,
+#super-like-6-image:checked ~ .pig-info:nth-of-type(6) .buttons,
+#like-6-image:checked ~ .pig-info:nth-of-type(6) .buttons,
+#dislike-7-image:checked ~ .pig-info:nth-of-type(7) .buttons,
+#super-like-7-image:checked ~ .pig-info:nth-of-type(7) .buttons,
+#like-7-image:checked ~ .pig-info:nth-of-type(7) .buttons {
+  display: none;
+}
