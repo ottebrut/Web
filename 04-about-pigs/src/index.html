@@ -5,43 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>04-about-pigs</title>
     <link rel="stylesheet" href="./index.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>PigTinder</header>
 
     <main class="container">
       <div class="pigs">
-        <input type="checkbox" id="dislike-1-image" />
-        <input type="checkbox" id="super-like-1-image" />
-        <input type="checkbox" id="like-1-image" />
-
-        <input type="checkbox" id="dislike-2-image" />
-        <input type="checkbox" id="super-like-2-image" />
-        <input type="checkbox" id="like-2-image" />
-
-        <input type="checkbox" id="dislike-3-image" />
-        <input type="checkbox" id="super-like-3-image" />
-        <input type="checkbox" id="like-3-image" />
-
-        <input type="checkbox" id="dislike-4-image" />
-        <input type="checkbox" id="super-like-4-image" />
-        <input type="checkbox" id="like-4-image" />
-
-        <input type="checkbox" id="dislike-5-image" />
-        <input type="checkbox" id="super-like-5-image" />
-        <input type="checkbox" id="like-5-image" />
-
-        <input type="checkbox" id="dislike-6-image" />
-        <input type="checkbox" id="super-like-6-image" />
-        <input type="checkbox" id="like-6-image" />
-
-        <input type="checkbox" id="dislike-7-image" />
-        <input type="checkbox" id="super-like-7-image" />
-        <input type="checkbox" id="like-7-image" />
-
-        <section class="pig-info">
+        <section class="pig-info visible">
           <div class="image">
             <img src="img/1.jpg" alt="Григорий" />
             <div class="image-info">
@@ -49,11 +24,6 @@
               <br />
               <span class="age">10 месяцев</span>
             </div>
-          </div>
-          <div class="buttons">
-            <label for="dislike-1-image" class="action-button dislike">&#10006;</label>
-            <label for="super-like-1-image" class="action-button super-like">&#10083;</label>
-            <label for="like-1-image" class="action-button like">&#10084;</label>
           </div>
         </section>
 
@@ -66,11 +36,6 @@
               <span class="age">3 года</span>
             </div>
           </div>
-          <div class="buttons">
-            <label for="dislike-2-image" class="action-button dislike">&#10006;</label>
-            <label for="super-like-2-image" class="action-button super-like">&#10083;</label>
-            <label for="like-2-image" class="action-button like">&#10084;</label>
-          </div>
         </section>
 
         <section class="pig-info">
@@ -81,11 +46,6 @@
               <br />
               <span class="age">2 года</span>
             </div>
-          </div>
-          <div class="buttons">
-            <label for="dislike-3-image" class="action-button dislike">&#10006;</label>
-            <label for="super-like-3-image" class="action-button super-like">&#10083;</label>
-            <label for="like-3-image" class="action-button like">&#10084;</label>
           </div>
         </section>
 
@@ -98,11 +58,6 @@
               <span class="age">5 лет</span>
             </div>
           </div>
-          <div class="buttons">
-            <label for="dislike-4-image" class="action-button dislike">&#10006;</label>
-            <label for="super-like-4-image" class="action-button super-like">&#10083;</label>
-            <label for="like-4-image" class="action-button like">&#10084;</label>
-          </div>
         </section>
 
         <section class="pig-info">
@@ -113,11 +68,6 @@
               <br />
               <span class="age">10 лет</span>
             </div>
-          </div>
-          <div class="buttons">
-            <label for="dislike-5-image" class="action-button dislike">&#10006;</label>
-            <label for="super-like-5-image" class="action-button super-like">&#10083;</label>
-            <label for="like-5-image" class="action-button like">&#10084;</label>
           </div>
         </section>
 
@@ -130,11 +80,6 @@
               <span class="age">3 месяца</span>
             </div>
           </div>
-          <div class="buttons">
-            <label for="dislike-6-image" class="action-button dislike">&#10006;</label>
-            <label for="super-like-6-image" class="action-button super-like">&#10083;</label>
-            <label for="like-6-image" class="action-button like">&#10084;</label>
-          </div>
         </section>
 
         <section class="pig-info">
@@ -145,11 +90,6 @@
               <br />
               <span class="age">6 лет</span>
             </div>
-          </div>
-          <div class="buttons">
-            <label for="dislike-7-image" class="action-button dislike">&#10006;</label>
-            <label for="super-like-7-image" class="action-button super-like">&#10083;</label>
-            <label for="like-7-image" class="action-button like">&#10084;</label>
           </div>
         </section>
 
@@ -162,6 +102,50 @@
           </div>
         </section>
       </div>
+
+      <div class="buttons">
+        <button class="action-button dislike">
+          <svg
+            class="icon dislike-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+            />
+          </svg>
+        </button>
+        <button class="action-button super-like">
+          <svg
+            class="icon super-like-icon"
+            width="34"
+            height="34"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path d="M8 24l3-9h-9l14-15-3 9h9l-14 15z" />
+          </svg>
+        </button>
+        <button class="action-button like">
+          <svg
+            class="icon like-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="38"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19.5 10c-2.483 0-4.5 2.015-4.5 4.5s2.017 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.017-4.5-4.5-4.5zm2.5 5h-2v2h-1v-2h-2v-1h2v-2h1v2h2v1zm-6.527 4.593c-1.108 1.086-2.275 2.219-3.473 3.407-6.43-6.381-12-11.147-12-15.808 0-6.769 8.852-8.346 12-2.944 3.125-5.362 12-3.848 12 2.944 0 .746-.156 1.496-.423 2.253-1.116-.902-2.534-1.445-4.077-1.445-3.584 0-6.5 2.916-6.5 6.5 0 2.063.97 3.901 2.473 5.093z"
+            />
+          </svg>
+        </button>
+      </div>
     </main>
+
+    <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
