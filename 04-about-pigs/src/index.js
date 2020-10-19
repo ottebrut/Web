@@ -17,7 +17,7 @@ images.forEach((image, index) => {
 });
 
 let xStart, yStart, xEnd, yEnd;
-const X_MIN_DIFF = 60, Y_MIN_DIFF = 100;
+const X_MIN_DIFF = 40, Y_MIN_DIFF = 40;
 
 function getXY(event) {
   const touch = event.touches[0];
@@ -34,7 +34,7 @@ function handleImageTouchMove(event) {
     yDiff = yEnd - yStart;
 
   let action;
-  if (Math.abs(xDiff) > Math.abs(yDiff) - 140) {
+  if (Math.abs(xDiff) > Math.abs(yDiff) - 80) {
     if (Math.abs(xDiff) < X_MIN_DIFF) {
       return;
     }
