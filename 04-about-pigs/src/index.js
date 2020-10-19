@@ -34,7 +34,7 @@ function handleImageTouchMove(event) {
     yDiff = yEnd - yStart;
 
   let action;
-  if (Math.abs(xDiff) > Math.abs(yDiff) - 60) {
+  if (Math.abs(xDiff) > Math.abs(yDiff) - 140) {
     if (Math.abs(xDiff) < X_MIN_DIFF) {
       return;
     }
