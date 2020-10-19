@@ -17,7 +17,7 @@ images.forEach((image, index) => {
 });
 
 let xStart, yStart, xEnd, yEnd;
-const MIN_DIFF = 100;
+const X_MIN_DIFF = 60, Y_MIN_DIFF = 100;
 
 function getXY(event) {
   const touch = event.touches[0];
@@ -34,8 +34,8 @@ function handleImageTouchMove(event) {
     yDiff = yEnd - yStart;
 
   let action;
-  if (Math.abs(xDiff) > Math.abs(yDiff)) {
-    if (Math.abs(xDiff) < MIN_DIFF) {
+  if (Math.abs(xDiff) > Math.abs(yDiff) - 60) {
+    if (Math.abs(xDiff) < X_MIN_DIFF) {
       return;
     }
     if (xDiff < 0) {
@@ -44,7 +44,7 @@ function handleImageTouchMove(event) {
       action = 'like';
     }
   } else {
-    if (Math.abs(yDiff) < MIN_DIFF) {
+    if (Math.abs(yDiff) < Y_MIN_DIFF) {
       return;
     }
     if (yDiff < 0) {
@@ -87,8 +87,13 @@ function addActionOnPig(pig, action) {
   const nextPig = document.querySelector('#' + 'pig-' + pigNumber);
   nextPig.classList.add('visible');
   visiblePig = nextPig;
-
   if (pigNumber === amountOfPigs) {
     document.querySelector('.buttons').classList.add('invisible');
   }
+
+  const message = document.querySelector('.' + action + "-message");
+  message.style.setProperty("opacity", "1");
+  setTimeout(() => {
+    message.style.setProperty("opacity", "0");
+  }, 500);
 }

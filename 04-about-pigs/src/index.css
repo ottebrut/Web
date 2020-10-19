@@ -16,10 +16,11 @@ header {
 
 /* Main */
 .container {
-  position: relative;
+  position: absolute;
 
   overflow-x: hidden;
 
+  width: 100%;
   height: calc(60vh + 1.3em + 90px);
   padding-top: 1.3em;
 }
@@ -29,6 +30,7 @@ header {
 }
 
 .pigs,
+.messages,
 .buttons {
   width: 90%;
   max-width: 540px;
@@ -61,6 +63,15 @@ header {
   object-fit: cover;
 }
 
+.image img,
+.action-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .image-info {
   position: absolute;
   bottom: 0.5em;
@@ -73,6 +84,68 @@ header {
 
 .age {
   font-size: 0.7em;
+}
+
+/* messages */
+.messages {
+  position: relative;
+  z-index: 9;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.message {
+  position: absolute;
+
+  padding: 0 0.2em;
+
+  border: 6px solid var(--action-color);
+
+  transition: opacity 0.5s;
+
+  color: var(--action-color);
+  font-size: min(12vw, 4em);
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 0 0 0.1em #2d2d2d;
+  text-transform: uppercase;
+}
+
+.dislike-message {
+  top: 0.8em;
+  left: 0.3em;
+
+  transform: rotate(-20deg);
+}
+
+.dislike-message,
+.dislike-icon {
+  --action-color: #d94c32;
+}
+
+.super-like-message {
+  top: calc(60vh - 3em);
+  left: 1em;
+
+  transform: rotate(5deg);
+}
+
+.super-like-message,
+.super-like-icon {
+  --action-color: #fff313;
+}
+
+.like-message {
+  top: 1.5em;
+  right: 0.5em;
+
+  transform: rotate(15deg);
+}
+
+.like-message,
+.like-icon {
+  --action-color: #509a43;
 }
 
 /* buttons */
@@ -105,15 +178,6 @@ header {
   -webkit-tap-highlight-color: transparent;
 }
 
-.image img,
-.action-button {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .action-button:active {
   box-shadow: 0 0 1rem 0.1rem rgba(42, 41, 41, 0.3);
 }
@@ -125,19 +189,7 @@ header {
 .icon {
   margin: auto;
 
-  fill: var(--icon-color);
-}
-
-.dislike-icon {
-  --icon-color: rgba(217, 76, 50, 0.95);
-}
-
-.super-like-icon {
-  --icon-color: #fff313;
-}
-
-.like-icon {
-  --icon-color: #509a43;
+  fill: var(--action-color);
 }
 
 /* Removing pig-info */
@@ -146,13 +198,13 @@ header {
 }
 
 .disliked {
-  left: min(-25em, -100vw);
+  left: min(-100vw, -25em);
 
   transform: rotate(-45deg);
 }
 
 .liked {
-  left: max(20em, 80vw);
+  left: max(100vw, 25em);
 
   transform: rotate(45deg);
 }
@@ -160,7 +212,7 @@ header {
 .disliked,
 .super-liked,
 .liked {
-  top: min(-30em, -50vw);
+  top: min(-100vh, -30em);
 
   transition: all 1s ease-in-out;
 }
