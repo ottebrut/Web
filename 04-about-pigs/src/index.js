@@ -54,11 +54,13 @@ function handleImageTouchMove(event) {
     }
   }
 
-  for (let elem of event.path) {
+  let elem = event.target;
+  while (true) {
     if (elem.className === 'image') {
       elem.removeEventListener('touchmove', handleImageTouchMove);
       break;
     }
+    elem = elem.parentElement;
   }
   addActionOnPig(visiblePig, action);
 }
@@ -69,13 +71,14 @@ actionButtons.forEach(actionButton => {
 });
 
 function handleButtonClick(event) {
-  let action;
-  for (let elem of event.path) {
+  let action, elem = event.target;
+  while (true) {
     let elemClass = elem.className;
     if (typeof elemClass === 'string' && elemClass.startsWith('action-button')) {
       action = elemClass.substr(elemClass.indexOf(' ') + 1);
       break;
     }
+    elem = elem.parentElement;
   }
   addActionOnPig(visiblePig, action);
 }
