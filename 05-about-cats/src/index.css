@@ -1,0 +1,361 @@
+:root {
+  --font-color: #444343;
+  --subfont-color: #6c7879;
+
+  --inactive-color: #eaeaea;
+  --border-color: #989898;
+
+  --background-color: #4d5c6b;
+}
+
+html {
+  color: var(--font-color);
+
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.module {
+  display: grid;
+  grid-template: minmax(auto, 13rem) calc(3rem + 3rem * 4) 1fr /2.2fr 2fr 0.1fr;
+
+  min-width: 50rem;
+  max-width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+
+  font-size: 1.4em;
+}
+
+/* information */
+.module__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding-bottom: 1rem;
+}
+
+.module__title {
+  margin-bottom: 0.5rem;
+
+  font-size: 2.5rem;
+}
+
+.module__description {
+  color: var(--subfont-color);
+}
+
+/* module form */
+.module__form {
+  grid-row: 2 / span 2;
+
+  padding: 1.25rem 0 1rem;
+}
+
+.module__form-checkbox-spam-container {
+  margin-bottom: 1.25rem;
+}
+
+/* image */
+.module__cat-image {
+  justify-self: center;
+  grid-row: 2;
+
+  width: 80%;
+  height: 100%;
+
+  border-radius: 1rem;
+
+  object-fit: cover;
+}
+
+.module__image-up-border,
+.module__image-down-border {
+  justify-self: center;
+
+  width: 60%;
+
+  background-color: var(--background-color);
+}
+
+.module__image-up-border {
+  margin-bottom: 1rem;
+}
+
+.module__image-down-border {
+  grid-row: 3;
+
+  margin-top: 1rem;
+}
+
+/* close button */
+.module__close-button {
+  grid-column: 3;
+  grid-row: 1;
+
+  padding-top: 2rem;
+
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.module__close-icon {
+  position: relative;
+  left: -2rem;
+
+  fill: #323232;
+}
+
+/* form */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* age and mass */
+.form__age-mass-container {
+  display: flex;
+  align-items: center;
+}
+
+.form__input-age,
+.form__input-mass {
+  flex-grow: 1;
+  align-self: stretch;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0 1rem;
+  padding-left: 0.5rem;
+
+  font: inherit;
+  font-size: 1.3rem;
+}
+
+.form__label-age,
+.form__label-mass {
+  cursor: pointer;
+}
+
+/* train type */
+.form__train-type-container {
+  display: flex;
+}
+
+.form__radio-train-type {
+  display: none;
+}
+
+.form__label-train-type {
+  display: flex;
+  flex: 1;
+
+  border: 1px solid var(--border-color);
+
+  --border-radius: 0.5rem;
+
+  background-color: var(--inactive-color);
+  cursor: pointer;
+  text-align: center;
+}
+
+.form__label-train-type:nth-of-type(1) {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.form__label-train-type:nth-of-type(2) {
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.form__label-train-type:nth-of-type(3) {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.form__label-train-type:focus {
+  z-index: 1;
+}
+
+.form__train-type-name {
+  margin: auto;
+}
+
+/* email */
+.form__input-email {
+  height: calc(3rem - 2px);
+
+  padding-left: 0.8rem;
+
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* checkbox */
+.form__checkbox-spam-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 2.5rem;
+
+  cursor: pointer;
+}
+
+.form__checkbox-spam {
+  position: absolute;
+  z-index: -1;
+
+  opacity: 0;
+}
+
+.form__checkbox-spam-indicator {
+  display: block;
+
+  width: 1rem;
+  height: 1rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+
+  background-color: var(--inactive-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form__checkbox-spam-text {
+  padding-left: 0.5rem;
+}
+
+/* button */
+.form__button-sign {
+  height: 3.3rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  background: var(--background-color);
+  color: white;
+  font: inherit;
+  font-size: 1.5rem;
+}
+
+/* common styles */
+.form__train-type-container,
+.form__input-email {
+  margin-top: 1rem;
+}
+
+.form__age-mass-container,
+.form__train-type-container {
+  height: 3rem;
+}
+
+.form__input-age,
+.form__input-mass,
+.form__input-email {
+  border: none;
+  border-radius: 0.2rem;
+
+  background-color: var(--inactive-color);
+}
+
+.form__input-age:focus,
+.form__input-mass:focus,
+.form__label-train-type:focus,
+.form__input-email:focus,
+.form__checkbox-spam-indicator:focus,
+.form__button-sign:focus {
+  box-shadow: 0 0 0.4rem 0.2rem var(--border-color);
+  outline: none;
+}
+
+/* checked train type */
+.form__radio-train-type:checked + .form__label-train-type {
+  background-color: var(--background-color);
+  color: white;
+}
+
+/* checked checkbox */
+.form__checkbox-spam:checked + .form__checkbox-spam-indicator {
+  background-color: var(--background-color);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+  color: #fff;
+}
+
+@media screen and (max-width: 830px) {
+  .module {
+    grid-template: 0.1fr 0 1fr / 1fr 0 1rem;
+
+    min-width: 0;
+    margin: 0;
+    padding-left: 1rem;
+
+    font-size: 1.2rem;
+  }
+
+  .module__image-up-border,
+  .module__image-down-border,
+  .module__cat-image {
+    display: none;
+  }
+
+  /* information */
+  .module__title {
+    margin-top: 1rem;
+
+    font-size: 2.1rem;
+  }
+
+  /* module form */
+  .module__form {
+    padding-top: 0;
+  }
+
+  .module__form-checkbox-spam-container {
+    margin-bottom: 1rem;
+  }
+
+  /* close button */
+  .module__close-button {
+    position: relative;
+    left: -1rem;
+
+    padding-top: 1rem;
+  }
+
+  .module__close-icon {
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  /* form */
+  .form__input-age,
+  .form__input-mass {
+    align-self: center;
+
+    height: 80%;
+  }
+
+  .form__label-train-type {
+    font-size: 1.1rem;
+  }
+}
