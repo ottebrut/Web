@@ -112,6 +112,12 @@ main {
   background-color: white;
 }
 
+.news-section__title,
+.news-section__image-subtext,
+.news-section__text {
+  word-wrap: break-word;
+}
+
 .news-section__title {
   display: block;
 
@@ -129,20 +135,16 @@ main {
   font-size: 32px;
 }
 
-.news-section__title_guide {
-  margin-top: 16px;
-
-  font-family: Franklin, sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
 .news-section_image-center .news-section__title {
   margin-top: 10px;
 }
 
 .news-section__title:hover {
   color: var(--link-color);
+}
+
+.news-section__title:first-letter {
+  font-size: 1.6em;
 }
 
 .news-section__image {
@@ -160,6 +162,16 @@ main {
 
   width: 50%;
   margin-right: 20px;
+}
+
+.news-section__image-subtext {
+  color: var(--inactive-text-color);
+  font-family: Franklin, sans-serif;
+  font-size: 12px;
+}
+
+.news-section_image-center-sm .news-section__image-subtext {
+  display: none;
 }
 
 .news-section__text {
@@ -180,12 +192,20 @@ main {
 }
 
 /* guide */
+.news-section__title_guide {
+  margin-top: 16px;
+
+  font-family: Franklin, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 .guide {
   padding: 0;
 
   color: var(--text-color);
   font-family: Franklin, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   list-style: none;
 }
 
@@ -230,6 +250,8 @@ main {
 }
 
 .opinion__text {
+  display: block;
+
   color: var(--text-color);
   font-family: Postoni, serif;
   font-size: 19px;
@@ -240,6 +262,11 @@ main {
 
 .opinion__text:hover {
   color: var(--link-color);
+}
+
+.opinion__text:first-letter {
+  font-size: 1.3em;
+  font-weight: 700;
 }
 
 .opinion__by-whom {
@@ -553,7 +580,11 @@ main {
 
   .news-section_image-center-sm .news-section__image {
     width: 100%;
-    margin: 8px 0 3px;
+    margin: 8px 0 5px;
+  }
+
+  .news-section_image-center-sm .news-section__image-subtext {
+    display: block;
   }
 
   .news-section_image-center-sm .news-section__title {
