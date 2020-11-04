@@ -116,14 +116,14 @@ header {
 
 .text-size-button__first {
   position: relative;
-  top: 2px;
+  top: 4px;
 
   font-size: 15px;
 }
 
 .text-size-button__second {
   position: relative;
-  top: 1px;
+  top: 2px;
 
   border-right: 1px solid white;
   border-left: 1px solid white;
@@ -284,7 +284,7 @@ main {
   word-wrap: break-word;
 }
 
-h1 {
+h2 {
   margin: 0;
 
   font-size: inherit;
@@ -313,10 +313,6 @@ h1 {
 
 #third-text-size:checked ~ main .news-section__title_size-lg {
   font-size: 45px;
-}
-
-.news-section_image-center .news-section__title-text {
-  margin-top: 10px;
 }
 
 .news-section__title-text:hover {
@@ -543,6 +539,10 @@ h1 {
   .news-section__title_size-md {
     font-size: 1.6em;
   }
+
+  .news-section_image-center-mx-lg-md .news-section__title-text {
+    margin-top: 10px;
+  }
 }
 
 /* LARGE */
@@ -638,6 +638,10 @@ h1 {
 
   .news-section__title_size-md {
     font-size: 1.6em;
+  }
+
+  .news-section_image-center-mx-lg-md .news-section__title-text {
+    margin-top: 10px;
   }
 
   .opinion__image {
@@ -769,6 +773,10 @@ h1 {
     margin: 0 0 0 16px;
   }
 
+  .news-section__image-subtext {
+    display: none;
+  }
+
   .news-section__text {
     display: none;
   }
@@ -857,12 +865,17 @@ h1 {
 @media screen and (max-width: 600px) {
   .text-size-button__third {
     position: relative;
-    top: -3px;
+    top: -4px;
+  }
+
+  .text-font-button__first {
+    position: relative;
+    top: 0;
   }
 
   .text-font-button__second {
     position: relative;
-    top: -3px;
+    top: -5px;
   }
 
   .buttons {
