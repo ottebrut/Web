@@ -90,7 +90,7 @@ header {
 }
 
 .text-color-button {
-  width: 50%;
+  width: 45px;
 }
 
 .text-color-buttons__black {
@@ -109,6 +109,7 @@ header {
 /* size buttons */
 .text-size-buttons {
   width: calc(135px + 2px);
+  margin-right: 20px;
 
   color: white;
 }
@@ -130,6 +131,38 @@ header {
 
 .text-size-button__third {
   font-size: 30px;
+}
+
+/* font buttons */
+.text-font-buttons {
+  width: calc(90px + 1px);
+
+  color: white;
+  font-size: 25px;
+}
+
+.text-font-button {
+  width: 45px;
+}
+
+.text-font-button__first {
+  border-right: 1px solid white;
+}
+
+.text-font-button__first .first-letter {
+  font-family: Postoni, sans-serif;
+}
+
+.text-font-button__first .second-letter {
+  font-family: Franklin, sans-serif;
+}
+
+.text-font-button__second .first-letter {
+  font-family: Oswald, sans-serif;
+}
+
+.text-font-button__second .second-letter {
+  font-family: Raleway, sans-serif;
 }
 
 /* logo */
@@ -184,6 +217,18 @@ main {
   font-size: 30px;
 }
 
+#first-text-font:checked ~ main {
+  --title-font-family: Postoni;
+  --title-bold-font: 700;
+  --text-font-family: Franklin;
+}
+
+#second-text-font:checked ~ main {
+  --title-font-family: Oswald;
+  --title-bold-font: 500;
+  --text-font-family: Raleway;
+}
+
 .container {
   display: grid;
   grid-gap: 32px;
@@ -212,7 +257,7 @@ main {
   width: 100%;
 
   color: var(--text-color);
-  font-family: Franklin, sans-serif;
+  font-family: var(--text-font-family), sans-serif;
   font-size: 1.333em;
   font-weight: 700;
   text-align: center;
@@ -260,9 +305,9 @@ h1 {
   margin: 0;
 
   color: var(--text-color);
-  font-family: Postoni, serif;
+  font-family: var(--title-font-family), sans-serif;
   font-size: 1.333em;
-  font-weight: 700;
+  font-weight: var(--title-bold-font);
   line-height: 1.05;
   text-decoration: none;
 }
@@ -310,7 +355,7 @@ h1 {
 
 .news-section__image-subtext {
   color: var(--inactive-text-color);
-  font-family: Franklin, sans-serif;
+  font-family: var(--text-font-family), sans-serif;
   font-size: 1em;
 }
 
@@ -322,7 +367,7 @@ h1 {
   margin-top: 10px;
 
   color: var(--inactive-text-color);
-  font-family: Franklin, sans-serif;
+  font-family: var(--text-font-family), sans-serif;
   font-size: 1em;
   line-height: 1.2;
 }
@@ -331,7 +376,7 @@ h1 {
   margin-top: 10px;
 
   color: var(--inactive-text-color);
-  font-family: Franklin, sans-serif;
+  font-family: var(--text-font-family), sans-serif;
   font-size: 0.8em;
 }
 
@@ -339,7 +384,7 @@ h1 {
 .news-section__title_guide {
   margin-top: 16px;
 
-  font-family: Franklin, sans-serif;
+  font-family: var(--text-font-family), sans-serif;
   font-size: 0.8em;
   text-transform: uppercase;
 }
@@ -348,7 +393,6 @@ h1 {
   padding: 0;
 
   color: var(--text-color);
-  font-family: Franklin, sans-serif;
   font-size: 0.867em;
   list-style: none;
 }
@@ -385,7 +429,7 @@ h1 {
   margin: 0 0 -16px;
 
   color: var(--text-color);
-  font-family: Franklin, sans-serif;
+  font-family: var(--text-font-family), sans-serif;
   font-size: 1.667em;
   font-weight: 700;
 }
@@ -398,7 +442,7 @@ h1 {
   display: block;
 
   color: var(--text-color);
-  font-family: Postoni, serif;
+  font-family: var(--title-font-family), sans-serif;
   font-size: 1.267em;
   font-weight: 300;
   line-height: 1;
@@ -418,7 +462,7 @@ h1 {
   margin-top: 10px;
 
   color: var(--inactive-text-color);
-  font-family: Franklin, sans-serif;
+  font-family: var(--text-font-family), sans-serif;
   font-size: 0.8em;
 }
 

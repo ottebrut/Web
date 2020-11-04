@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>06-about-papers</title>
     <link rel="stylesheet" href="./index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <input type="radio" name="text-color" id="black-text-color" checked />
@@ -17,6 +14,9 @@
     <input type="radio" name="text-size" id="first-text-size" checked />
     <input type="radio" name="text-size" id="second-text-size" />
     <input type="radio" name="text-size" id="third-text-size" />
+
+    <input type="radio" name="text-font" id="first-text-font" checked />
+    <input type="radio" name="text-font" id="second-text-font" />
 
     <header>
       <div class="logo-container">
@@ -61,6 +61,25 @@
             class="text-size-button__third text-size-button text-button"
           >
             <span class="text-button__text">B</span>
+          </label>
+        </div>
+
+        <div class="text-buttons text-font-buttons" title="Change font">
+          <label
+            for="first-text-font"
+            class="text-font-button__first text-font-button text-button"
+          >
+            <span class="text-button__text">
+              <span class="first-letter">C</span><span class="second-letter">c</span>
+            </span>
+          </label>
+          <label
+            for="second-text-font"
+            class="text-font-button__second text-font-button text-button"
+          >
+            <span class="text-button__text">
+              <span class="first-letter">C</span><span class="second-letter">c</span>
+            </span>
           </label>
         </div>
       </div>
