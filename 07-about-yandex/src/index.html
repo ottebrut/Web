@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-about-yandex</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header__city">
+        <span class="header__geolocation-button"></span>
+        Екатеринбург
+      </a>
+      <a href="#" class="header__settings">Настройка</a>
+      <div class="email header__email">
+        <a href="#" class="email__username">
+          login
+        </a>
+        <a href="#" class="email__unread-emails">
+          Почта <span class="email__unread-emails_bold">138</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      <article class="current-media main__current-media">
+        <div class="main__section-title">
+          <a href="#" class="title title_bold section-element section-element_lg-mr">
+            Сейчас в СМИ
+          </a>
+          <a href="#" class="title title_light section-element section-element_lg-mr">
+            в Екатеринбурге
+          </a>
+          <span class="section-element section-element section-element_grey">
+            13 ноября, понедельник 16:57
+          </span>
+        </div>
+
+        <ul class="current-media__news-list section-items">
+          <li class="section-items__item section-items__item_list">
+            <a href="#">
+              Турция вновь заявила об участии в миссии миротворцев в Карабахе, несмотря на опровержения
+            </a>
+          </li>
+          <li class="section-items__item section-items__item_list">
+            <a href="#">
+              В России зафиксировали новый рекорд по числу смертей от коронавируса
+            </a>
+          </li>
+          <li class="section-items__item section-items__item_list">
+            <a href="#">
+              Заразившегося коронавирусом Зеленского госпитализировали
+            </a>
+          </li>
+          <li class="section-items__item section-items__item_list">
+            <a href="#">
+              В Кремле заявили о подготовке большой пресс-конференции Путина
+            </a>
+          </li>
+          <li class="section-items__item section-items__item_list">
+            <a href="#">
+              Правительство дало губернаторам новые поручения из-за коронавируса
+            </a>
+          </li>
+        </ul>
+
+        <section class="current-media__currents section-items">
+          <div class="section-items__item">
+            <a href="#" class="section-element section-element_md-mr section-element_bold">
+              USD
+            </a>
+            <span class="section-element section-element_md-mr section-element_bold">
+              ЦБ
+            </span>
+            <span class="section-element section-element_md-mr">
+              59,18
+            </span>
+            <span class="section-element section-element_mx-mr section-element_grey">
+              -0,10
+            </span>
+          </div>
+
+          <div class="section-items__item">
+            <a href="#" class="section-element section-element_md-mr section-element_bold">
+              EUR
+            </a>
+            <span class="section-element section-element_md-mr section-element_bold">
+              ЦБ
+            </span>
+            <span class="section-element section-element_md-mr">
+              68,92
+            </span>
+            <span class="section-element section-element_mx-mr section-element_grey">
+              -0,06
+            </span>
+          </div>
+
+          <div class="section-items__item">
+            <a href="#" class="section-element section-element_md-mr section-element_bold">
+              НЕФТЬ
+            </a>
+            <span class="section-element section-element_md-mr">
+              63,44
+            </span>
+            <span class="section-element section-element_mx-mr section-element_grey">
+              -0,27%
+            </span>
+          </div>
+
+          <div class="section-items__item">
+            <a href="#" class="current-media__3-dots">
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <section class="yandex-disk-adv main__yandex-disk-adv">
+        <img src="./img/yd-adv-2.jpg" class="yandex-disk-adv__image" alt="Your wet dream">
+        <a href="#" class="yandex-disk-adv__title title title_bold">
+          32 ГБ студентам на Яндекс.Диске
+        </a>
+        <div class="yandex-disk-adv__sub-title">
+          Бесплатно и навсегда
+        </div>
+      </section>
+
+      <section class="search-container main__search-container main__section">
+        <label for="main-search-form" class="search-container__logo">Яндекс</label>
+
+        <div class="search-container__search-sections">
+           <a href="#" class="search-container__search-item">
+             Видео
+           </a>
+           <a href="#" class="search-container__search-item">
+             Картинки
+           </a>
+           <a href="#" class="search-container__search-item">
+             Новости
+           </a>
+           <a href="#" class="search-container__search-item">
+             Карты
+           </a>
+           <a href="#" class="search-container__search-item">
+             Маркет
+           </a>
+           <a href="#" class="search-container__search-item">
+             Переводчик
+           </a>
+           <a href="#" class="search-container__search-item">
+             Музыка
+           </a>
+           <a href="#" class="search-container__search-item">
+             ещё
+           </a>
+        </div>
+
+        <form action="./index.html" method="get" class="search-form search-container__search-form">
+          <input type="text" class="search-form__input" id="main-search-form">
+          <button class="search-form__submit-button" type="submit">Найти</button>
+        </form>
+
+        <div class="search-form__sub-search">
+          Найдется все. Например, <a href="#" class="search-form__sub-search_grey">как создать хороший курс по верстке</a>
+        </div>
+      </section>
+
+      <img src="./img/big-adv-2.jpg" alt="Your biggest wet dream" class="main__big-adv">
+
+      <div class="main__first-column">
+        <section class="main__section">
+          <a href="#" class="title main__section-title">
+            Посещаемое
+          </a>
+
+          <div class="section-items">
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_bold">
+                Маркет
+              </span>
+              &mdash; китайская распродажа
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_bold">
+                Авто.ру
+              </span>
+              &mdash; Туссан третьей степени
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_bold">
+                Недвижимость
+              </span>
+              &mdash; продажа студии
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_bold">
+                Работа
+              </span>
+              &mdash; охранником
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_bold">
+                Здоровье
+              </span>
+              &mdash; врач на связи
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_bold">
+                Коллекции
+              </span>
+              &mdash; как мелировать волосы
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_bold">
+                Авиабилеты
+              </span>
+              &mdash; из Екатеринбурга с любовью
+            </a>
+          </div>
+        </section>
+
+        <section class="anecdotes main__section">
+          <a href="#" class="title main__section-title">
+            Лучшие анекдоты
+          </a>
+
+          <div class="section-items">
+            <div class="anecdotes__item section-items__item">
+              Раздел: <a href="#" class="section-element section-element_blue">Товарищи</a><br />
+              &mdash; Товарищ, проснитесь, вы наверстали!
+            </div>
+          </div>
+
+          <div class="anecdotes__cycle">
+            <span class="anecdotes__arrow"></span>
+            Показать ещё
+          </div>
+        </section>
+      </div>
+
+      <div class="main__second-column">
+        <section class="main__section">
+          <a href="#" class="title main__section-title">
+            Телепрограмма
+          </a>
+
+
+          <div class="section-items">
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_lg-mr">
+                16:00
+              </span>
+              <span class="section-element section-element_lg-mr">
+                Недопсихология
+              </span>
+              <span class="section-element section-element_lg-mr section-element_grey">
+                41 Домашний
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_lg-mr">
+                16:30
+              </span>
+              <span class="section-element section-element_lg-mr">
+                Менты круты
+              </span>
+              <span class="section-element section-element_lg-mr section-element_grey">
+                НТВ
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_lg-mr">
+                16:30
+              </span>
+              <span class="section-element section-element_lg-mr">
+                Тупо ни о чем
+              </span>
+              <span class="section-element section-element_lg-mr section-element_grey">
+                Пятый канал
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_lg-mr">
+                16:30
+              </span>
+              <span class="section-element section-element_lg-mr">
+                Недоновости
+              </span>
+              <span class="section-element section-element_lg-mr section-element_grey">
+                РЕН ТВ
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_lg-mr">
+                16:30
+              </span>
+              <span class="section-element section-element_lg-mr">
+                Твоя мама мне верит
+              </span>
+              <span class="section-element section-element_lg-mr section-element_grey">
+                ТВ-3
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_lg-mr">
+                16:30
+              </span>
+              <span class="section-element section-element_lg-mr">
+                Нереальная ржака
+              </span>
+              <span class="section-element section-element_lg-mr section-element_grey">
+                ТНТ
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <section class="main__section">
+          <a href="#" class="title main__section-title">
+            Автомобильные новости
+          </a>
+
+          <div class="automobile-items-container">
+            <div class="automobile-items section-items">
+              <a href="#" class="section-items__item">
+                Я вообще-то не очень люблю автомобили
+                <span class="section-element section-element_grey section-element_small">
+                  15:14
+                </span>
+              </a>
+
+              <a href="#" class="section-items__item">
+                Они кажутся заманчивыми, но меня особо не привлекают
+                <span class="section-element section-element_grey section-element_small">
+                  15:14
+                </span>
+              </a>
+
+              <a href="#" class="section-items__item">
+                Правда, однажды у меня даже была мысль посмотреть все серии Top Gear
+                <span class="section-element section-element_grey section-element_small">
+                  15:14
+                </span>
+              </a>
+
+              <a href="#" class="section-items__item">
+                Но, как и любое ненужное начинание, оно ушло в никуда
+                <span class="section-element section-element_grey section-element_small">
+                  15:14
+                </span>
+              </a>
+
+              <a href="#" class="section-items__item">
+                Хотя в детсве я очень много времени проводил, играя именно в машинки
+                <span class="section-element section-element_grey section-element_small">
+                  15:14
+                </span>
+              </a>
+
+              <a href="#" class="section-items__item">
+                Но думаю это был гуманитарный интерес, мне нравилась их форма и то, как я мог расставлять их везде
+                <span class="section-element section-element_grey section-element_small">
+                  15:14
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="main__third-column">
+        <section class="main__section">
+          <a href="#" class="title main__section-title">
+            Погода
+            <span class="weather-icon"></span>
+            <span class="title_black">-3 &#8451;</span>
+          </a>
+
+          <div class="section-item">
+            <span class="section-element section-element_md-mr">Вечер -5,</span>
+            ночь -7
+          </div>
+        </section>
+
+        <section class="main__section">
+          <a href="#" class="title main__section-title">
+            Пробки
+            <span class="car-icon"></span>
+            <span class="title_black">4 балла</span>
+          </a>
+
+          <div class="section-item">
+            Местами затруднение
+          </div>
+        </section>
+
+        <section class="main__section">
+          <a href="#" class="title">
+            Карта Екатеринбурга
+          </a>
+
+          <div class="section-items">
+            <a href="#" class="section-items__item section-items__item_inline">
+              <span class="section-element section-element_lg-mr section-element_bold">
+                Такси
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item section-items__item_inline">
+              <span class="section-element section-element_lg-mr section-element_bold">
+                Расписания
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item section-items__item_inline">
+              <span class="section-element section-element_bold">
+                Междугородние автобусы
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <section class="main__section">
+          <a href="#" class="title main__section-title">
+            Афиша
+          </a>
+
+          <div class="section-items">
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_md-mr section-element_ellipsis">
+                Субурбикон
+              </span>
+              <span class="section-element section-element_grey">
+                премьера в чт
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_md-mr section-element_ellipsis">
+                Последний богатырь
+              </span>
+              <span class="section-element section-element_grey">
+                приключения
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_md-mr section-element_ellipsis">
+                Фиксики: Большой секрет
+              </span>
+              <span class="section-element section-element_grey">
+                мультфильм
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_md-mr section-element_ellipsis">
+                Тор: Рагнарёк
+              </span>
+              <span class="section-element section-element_grey">
+                фэнтези
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_md-mr section-element_ellipsis">
+                Убийство в Восточном экспрессе
+              </span>
+              <span class="section-element section-element_grey">
+                фэнтези
+              </span>
+            </a>
+
+            <a href="#" class="section-items__item">
+              <span class="section-element section-element_sm-mr section-element_bold">
+                Концерты &mdash; Brainstorm
+              </span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
