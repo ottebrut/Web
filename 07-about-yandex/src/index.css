@@ -70,7 +70,6 @@ a:hover {
 
 .header__city {
   margin-right: auto;
-  margin-left: 20px;
 
   color: var(--grey);
   cursor: pointer;
@@ -334,7 +333,7 @@ a:hover {
   grid-column-start: 11;
 }
 
-.main__section {
+.main__sub-section {
   margin-top: 30px;
 }
 
@@ -391,8 +390,26 @@ a:hover {
   display: inline-block;
 }
 
+.anecdotes__input {
+  display: none;
+}
+
 .anecdotes__item {
+  display: none;
+
   line-height: 1.6;
+}
+
+#anec-1:checked ~ .section-items .anecdotes__item:nth-child(1),
+#anec-2:checked ~ .section-items .anecdotes__item:nth-child(2),
+#anec-3:checked ~ .section-items .anecdotes__item:nth-child(3),
+#anec-4:checked ~ .section-items .anecdotes__item:nth-child(4),
+#anec-5:checked ~ .section-items .anecdotes__item:nth-child(5) {
+  display: block;
+}
+
+.anecdotes__anecdote {
+  white-space: pre-line;
 }
 
 .anecdotes__cycle {
@@ -412,6 +429,20 @@ a:hover {
   height: 16px;
 
   background: url(./img/arrow.svg) no-repeat;
+}
+
+.anecdotes__label {
+  display: none;
+
+  cursor: pointer;
+}
+
+#anec-1:checked ~ .anecdotes__cycle .anecdotes__label:nth-of-type(1),
+#anec-2:checked ~ .anecdotes__cycle .anecdotes__label:nth-of-type(2),
+#anec-3:checked ~ .anecdotes__cycle .anecdotes__label:nth-of-type(3),
+#anec-4:checked ~ .anecdotes__cycle .anecdotes__label:nth-of-type(4),
+#anec-5:checked ~ .anecdotes__cycle .anecdotes__label:nth-of-type(5) {
+  display: inline-block;
 }
 
 .automobile-items-container {

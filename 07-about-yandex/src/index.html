@@ -125,7 +125,7 @@
         </div>
       </section>
 
-      <section class="search-container main__search-container main__section">
+      <section class="search-container main__search-container main__sub-section">
         <label for="main-search-form" class="search-container__logo">Яндекс</label>
 
         <div class="search-container__search-sections">
@@ -168,7 +168,7 @@
       <img src="./img/big-adv-2.jpg" alt="Your biggest wet dream" class="main__big-adv">
 
       <div class="main__first-column">
-        <section class="main__section">
+        <section class="main__sub-section">
           <a href="#" class="title main__section-title">
             Посещаемое
           </a>
@@ -225,27 +225,87 @@
           </div>
         </section>
 
-        <section class="anecdotes main__section">
+        <section class="anecdotes main__sub-section">
           <a href="#" class="title main__section-title">
             Лучшие анекдоты
           </a>
 
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-1" checked>
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-2">
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-3">
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-4">
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-5">
+
           <div class="section-items">
             <div class="anecdotes__item section-items__item">
               Раздел: <a href="#" class="section-element section-element_blue">Товарищи</a><br />
-              &mdash; Товарищ, проснитесь, вы наверстали!
+              <span class="anecdotes__anecdote">&mdash; Товарищ, проснитесь, вы наверстали!
+              </span>
+            </div>
+
+            <div class="anecdotes__item section-items__item">
+              Раздел: <a href="#" class="section-element section-element_blue">Миколы</a><br />
+              <span class="anecdotes__anecdote">Хохол проходит в армии комиссию.
+                - Кем хочешь служить?
+                - Хочу кинологом, шоб с собаками работать.
+                - Ладно. Только смотри чтобы справился.
+                Проходит 3 месяца. Комиссия прибыла в часть с проверкой. Встретили хохла.
+                - Ну, давай, показывай, - чего добился.
+                Хохол выводит собаку и говорит:
+                - Микола - ИЩИ!
+                Микола скрывается в кустах. Проходит 15 минут, собака вся изодранная, в репейнике и болотной жиже возвращается.
+                - Микола, ну, шо найшов?
+                Микола:
+                - Кого?
+              </span>
+            </div>
+
+            <div class="anecdotes__item section-items__item">
+              Раздел: <a href="#" class="section-element section-element_blue">Мамы</a><br />
+              <span class="anecdotes__anecdote">Прибегает заплаканная девочка к маме, и сквозь слезы говорит:
+              —Мам, мам, а что все на улице говорят, что у меня лицо на жопу похоже?
+              —У тебя прекрасное личико, они шутят так-успокаивает мама
+              Девочка радостная убегает. Бежит по улице, видит люк канализационный открыт, заглядывает
+              туда, а от туда крик: &quot;не сраааать!&quot;
+              </span>
+            </div>
+
+            <div class="anecdotes__item section-items__item">
+              Раздел: <a href="#" class="section-element section-element_blue">Песики</a><br />
+              <span class="anecdotes__anecdote">Идет мужик по улице, видит очередь, спрашивает за чем? Отвечают мол завезли ПесиковБурбесиков. Он в ахуе, а че это за срань? Да никто не знает, но все стоят.
+                Раз такое дело, подумал мужик, надо и себе взять. Встал в очередь, короче. Дождался своей и
+                говорит - взвесьте что ли полкило этих ваших Песиков-Бурбесиков. Продавщица же отвечает -
+                Песики-Бурбесики закончились, но есть Коники-Бурбоники.
+                Почесал мужик репу, говорит - ну, дайте их.
+                Насыпала продавщица ему в пакет и пошел мужик. Ну, надо же глянуть что за Коников-бурбоников
+                он купил. Разворачивает пакет, а там песики-бурбосики
+              </span>
+            </div>
+
+            <div class="anecdotes__item section-items__item">
+              Раздел: <a href="#" class="section-element section-element_blue">Гарри Поттер</a><br />
+              <span class="anecdotes__anecdote">Урок зельеварения.
+                Профессор Снейп на доске пишет цветными мелками состав зелья.
+                Поттер поднимает руку и говорит.
+                -Профессор, голубым не видно.
+                -Поттер, иди мамке пожалуйся, мудак блядь.
+              </span>
             </div>
           </div>
 
           <div class="anecdotes__cycle">
             <span class="anecdotes__arrow"></span>
-            Показать ещё
+            <label for="anec-2" class="anecdotes__label">Показать ещё</label>
+            <label for="anec-3" class="anecdotes__label">Показать ещё</label>
+            <label for="anec-4" class="anecdotes__label">Показать ещё</label>
+            <label for="anec-5" class="anecdotes__label">Показать ещё</label>
+            <label for="anec-5" class="anecdotes__label">Больше нету</label>
           </div>
         </section>
       </div>
 
       <div class="main__second-column">
-        <section class="main__section">
+        <section class="main__sub-section">
           <a href="#" class="title main__section-title">
             Телепрограмма
           </a>
@@ -326,7 +386,7 @@
           </div>
         </section>
 
-        <section class="main__section">
+        <section class="main__sub-section">
           <a href="#" class="title main__section-title">
             Автомобильные новости
           </a>
@@ -380,7 +440,7 @@
       </div>
 
       <div class="main__third-column">
-        <section class="main__section">
+        <section class="main__sub-section">
           <a href="#" class="title main__section-title">
             Погода
             <span class="weather-icon"></span>
@@ -393,7 +453,7 @@
           </div>
         </section>
 
-        <section class="main__section">
+        <section class="main__sub-section">
           <a href="#" class="title main__section-title">
             Пробки
             <span class="car-icon"></span>
@@ -405,7 +465,7 @@
           </div>
         </section>
 
-        <section class="main__section">
+        <section class="main__sub-section">
           <a href="#" class="title">
             Карта Екатеринбурга
           </a>
@@ -431,7 +491,7 @@
           </div>
         </section>
 
-        <section class="main__section">
+        <section class="main__sub-section">
           <a href="#" class="title main__section-title">
             Афиша
           </a>
