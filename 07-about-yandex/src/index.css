@@ -22,7 +22,7 @@
 :root {
   --grey: #999;
   --blue: #0454bc;
-  ---light-blue: #6694cf;
+  --light-blue: #6694cf;
   --yellow: #ffdb4d;
   --dark-yellow: #f3ca37;
   --dark-red: #e91616;
@@ -50,6 +50,8 @@ a:hover {
 }
 
 .header {
+  position: relative;
+
   display: flex;
   justify-content: flex-end;
 
@@ -63,7 +65,7 @@ a:hover {
 }
 
 .header__city,
-.header__settings {
+.header__settings-label {
   height: 30px;
   padding-top: 8px;
 }
@@ -90,6 +92,115 @@ a:hover {
 
 .header__city:hover .header__geolocation-button {
   background: url(./img/geolocation-red.svg) no-repeat;
+}
+
+.header__settings-label {
+  cursor: pointer;
+}
+
+.header__settings-label:hover {
+  color: var(--dark-red);
+}
+
+.header__settings-input {
+  display: none;
+}
+
+.header__settings {
+  position: absolute;
+  top: 48px;
+  right: 200px;
+
+  display: none;
+
+  box-sizing: border-box;
+
+  width: 220px;
+  height: 210px;
+  padding: 10px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.header-settings__triangle {
+  position: absolute;
+  top: -9px;
+  left: 100.4px;
+
+  width: 15px;
+  height: 15px;
+
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+
+  transform: rotate(45deg);
+
+  background-color: white;
+}
+
+.header-settings-label {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 7px;
+
+  cursor: pointer;
+}
+
+.header-settings-label__checkbox {
+  --checkbox-grey: #dfdfdf;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 3px;
+
+  background-color: var(--checkbox-grey);
+}
+
+.header-settings-label:hover .header-settings-label__checkbox {
+  --checkbox-grey: #c6c6c6;
+}
+
+#checkbox-to-visit:checked ~ .header .label-to-visit .header-settings-label__checkbox,
+#checkbox-anecdotes:checked ~ .header .label-anecdotes .header-settings-label__checkbox,
+#checkbox-tv:checked ~ .header .label-tv .header-settings-label__checkbox,
+#checkbox-automobiles:checked ~ .header .label-automobiles .header-settings-label__checkbox,
+#checkbox-weather:checked ~ .header .label-weather .header-settings-label__checkbox,
+#checkbox-traffics:checked ~ .header .label-traffics .header-settings-label__checkbox,
+#checkbox-map:checked ~ .header .label-map .header-settings-label__checkbox,
+#checkbox-handbill:checked ~ .header .label-handbill .header-settings-label__checkbox {
+  --checkbox-blue: #3c98e5;
+
+  border-color: var(--checkbox-blue);
+
+  background-color: var(--checkbox-blue);
+  background-image: url(./img/tick-icon.svg);
+  background-repeat: no-repeat;
+}
+
+#checkbox-to-visit:checked ~ .header .label-to-visit:hover .header-settings-label__checkbox,
+#checkbox-anecdotes:checked ~ .header .label-anecdotes:hover .header-settings-label__checkbox,
+#checkbox-tv:checked ~ .header .label-tv:hover .header-settings-label__checkbox,
+#checkbox-automobiles:checked ~ .header .label-automobiles:hover .header-settings-label__checkbox,
+#checkbox-weather:checked ~ .header .label-weather:hover .header-settings-label__checkbox,
+#checkbox-traffics:checked ~ .header .label-traffics:hover .header-settings-label__checkbox,
+#checkbox-map:checked ~ .header .label-map:hover .header-settings-label__checkbox,
+#checkbox-handbill:checked ~ .header .label-handbill:hover .header-settings-label__checkbox {
+  --checkbox-blue: var(--blue);
+}
+
+.header-settings-label__text {
+  margin-left: 5px;
+}
+
+.header__settings-input:checked ~ .header__settings {
+  display: block;
 }
 
 .header__email {
@@ -317,6 +428,10 @@ a:hover {
   object-fit: cover;
 }
 
+.main-sub-section-checkbox {
+  display: none;
+}
+
 .main__first-column,
 .main__second-column,
 .main__third-column {
@@ -333,8 +448,46 @@ a:hover {
   grid-column-start: 11;
 }
 
+#checkbox-to-visit:not(:checked) ~ #checkbox-anecdotes:not(:checked) ~ .main .main__second-column {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+#checkbox-to-visit:not(:checked) ~ #checkbox-anecdotes:not(:checked) ~ .main .main__third-column {
+  grid-column-start: 6;
+  grid-row-start: 4;
+}
+
+#checkbox-tv:not(:checked) ~ #checkbox-automobiles:not(:checked) ~ .main .main__third-column {
+  grid-column-start: 6;
+  grid-row-start: 4;
+}
+
+#checkbox-to-visit:not(:checked)
+  ~ #checkbox-anecdotes:not(:checked)
+  ~ #checkbox-tv:not(:checked)
+  ~ #checkbox-automobiles:not(:checked)
+  ~ .main
+  .main__third-column {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
 .main__sub-section {
+  display: none;
+
   margin-top: 30px;
+}
+
+#checkbox-to-visit:checked ~ .main .main__first-column .to-visit,
+#checkbox-anecdotes:checked ~ .main .main__first-column .anecdotes,
+#checkbox-tv:checked ~ .main .main__second-column .tv,
+#checkbox-automobiles:checked ~ .main .main__second-column .automobiles,
+#checkbox-weather:checked ~ .main .main__third-column .weather,
+#checkbox-traffics:checked ~ .main .main__third-column .traffics,
+#checkbox-map:checked ~ .main .main__third-column .map,
+#checkbox-handbill:checked ~ .main .main__third-column .handbill {
+  display: block;
 }
 
 .main__section-title {
@@ -349,7 +502,7 @@ a:hover {
 }
 
 .title_light {
-  color: var(---light-blue);
+  color: var(--light-blue);
 }
 
 .title_black {
@@ -465,9 +618,9 @@ a:hover {
   padding-right: 2px;
 
   background: linear-gradient(white 30%, rgba(255, 255, 255, 0)),
-              linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
-              radial-gradient(farthest-side at 50% 0, rgba(34, 34, 34, 0.5), rgba(0, 0, 0, 0)),
-              radial-gradient(farthest-side at 50% 100%, rgba(34, 34, 34, 0.5), rgba(0, 0, 0, 0)) 0 100%;
+    linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0, rgba(34, 34, 34, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 50% 100%, rgba(34, 34, 34, 0.5), rgba(0, 0, 0, 0)) 0 100%;
   background-attachment: local, local, scroll, scroll;
   background-color: white;
   background-repeat: no-repeat;

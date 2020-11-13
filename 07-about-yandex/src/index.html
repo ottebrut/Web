@@ -7,12 +7,69 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-to-visit" checked />
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-anecdotes" checked />
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-tv" checked />
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-automobiles" checked />
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-weather" checked />
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-traffics" checked />
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-map" checked />
+    <input type="checkbox" class="main-sub-section-checkbox" id="checkbox-handbill" checked />
+
     <header class="header">
       <a href="#" class="header__city">
         <span class="header__geolocation-button"></span>
         Екатеринбург
       </a>
-      <a href="#" class="header__settings">Настройка</a>
+
+      <label for="header-settings-input" class="header__settings-label">
+        Настройка
+      </label>
+      <input type="checkbox" class="header__settings-input" id="header-settings-input" />
+      <div class="header-settings header__settings">
+        <div class="header-settings__triangle"></div>
+
+        <label class="header-settings-label label-to-visit" for="checkbox-to-visit">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Посещаемое</span>
+        </label>
+
+        <label class="header-settings-label label-anecdotes" for="checkbox-anecdotes">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Лучшие анекдоты</span>
+        </label>
+
+        <label class="header-settings-label label-tv" for="checkbox-tv">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Телепрограмма</span>
+        </label>
+
+        <label class="header-settings-label label-automobiles" for="checkbox-automobiles">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Автомобильные новости</span>
+        </label>
+
+        <label class="header-settings-label label-weather" for="checkbox-weather">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Погода</span>
+        </label>
+
+        <label class="header-settings-label label-traffics" for="checkbox-traffics">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Пробки</span>
+        </label>
+
+        <label class="header-settings-label label-map" for="checkbox-map">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Карта Екатеринбурга</span>
+        </label>
+
+        <label class="header-settings-label label-handbill" for="checkbox-handbill">
+          <span class="header-settings-label__checkbox"></span>
+          <span class="header-settings-label__text">Афиша</span>
+        </label>
+      </div>
+
       <div class="email header__email">
         <a href="#" class="email__username">
           login
@@ -40,7 +97,8 @@
         <ul class="current-media__news-list section-items">
           <li class="section-items__item section-items__item_list">
             <a href="#">
-              Турция вновь заявила об участии в миссии миротворцев в Карабахе, несмотря на опровержения
+              Турция вновь заявила об участии в миссии миротворцев в Карабахе, несмотря на
+              опровержения
             </a>
           </li>
           <li class="section-items__item section-items__item_list">
@@ -109,14 +167,13 @@
           </div>
 
           <div class="section-items__item">
-            <a href="#" class="current-media__3-dots">
-            </a>
+            <a href="#" class="current-media__3-dots"> </a>
           </div>
         </section>
       </article>
 
       <section class="yandex-disk-adv main__yandex-disk-adv">
-        <img src="./img/yd-adv-2.jpg" class="yandex-disk-adv__image" alt="Your wet dream">
+        <img src="./img/yd-adv-2.jpg" class="yandex-disk-adv__image" alt="Your wet dream" />
         <a href="#" class="yandex-disk-adv__title title title_bold">
           32 ГБ студентам на Яндекс.Диске
         </a>
@@ -125,50 +182,51 @@
         </div>
       </section>
 
-      <section class="search-container main__search-container main__sub-section">
+      <section class="search-container main__search-container main__section">
         <label for="main-search-form" class="search-container__logo">Яндекс</label>
 
         <div class="search-container__search-sections">
-           <a href="#" class="search-container__search-item">
-             Видео
-           </a>
-           <a href="#" class="search-container__search-item">
-             Картинки
-           </a>
-           <a href="#" class="search-container__search-item">
-             Новости
-           </a>
-           <a href="#" class="search-container__search-item">
-             Карты
-           </a>
-           <a href="#" class="search-container__search-item">
-             Маркет
-           </a>
-           <a href="#" class="search-container__search-item">
-             Переводчик
-           </a>
-           <a href="#" class="search-container__search-item">
-             Музыка
-           </a>
-           <a href="#" class="search-container__search-item">
-             ещё
-           </a>
+          <a href="#" class="search-container__search-item">
+            Видео
+          </a>
+          <a href="#" class="search-container__search-item">
+            Картинки
+          </a>
+          <a href="#" class="search-container__search-item">
+            Новости
+          </a>
+          <a href="#" class="search-container__search-item">
+            Карты
+          </a>
+          <a href="#" class="search-container__search-item">
+            Маркет
+          </a>
+          <a href="#" class="search-container__search-item">
+            Переводчик
+          </a>
+          <a href="#" class="search-container__search-item">
+            Музыка
+          </a>
+          <a href="#" class="search-container__search-item">
+            ещё
+          </a>
         </div>
 
         <form action="./index.html" method="get" class="search-form search-container__search-form">
-          <input type="text" class="search-form__input" id="main-search-form">
+          <input type="text" class="search-form__input" id="main-search-form" />
           <button class="search-form__submit-button" type="submit">Найти</button>
         </form>
 
         <div class="search-form__sub-search">
-          Найдется все. Например, <a href="#" class="search-form__sub-search_grey">как создать хороший курс по верстке</a>
+          Найдется все. Например,
+          <a href="#" class="search-form__sub-search_grey">как создать хороший курс по верстке</a>
         </div>
       </section>
 
-      <img src="./img/big-adv-2.jpg" alt="Your biggest wet dream" class="main__big-adv">
+      <img src="./img/big-adv-2.jpg" alt="Your biggest wet dream" class="main__big-adv" />
 
       <div class="main__first-column">
-        <section class="main__sub-section">
+        <section class="to-visit main__sub-section">
           <a href="#" class="title main__section-title">
             Посещаемое
           </a>
@@ -230,17 +288,16 @@
             Лучшие анекдоты
           </a>
 
-          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-1" checked>
-          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-2">
-          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-3">
-          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-4">
-          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-5">
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-1" checked />
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-2" />
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-3" />
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-4" />
+          <input type="radio" name="anecdote" class="anecdotes__input" id="anec-5" />
 
           <div class="section-items">
             <div class="anecdotes__item section-items__item">
               Раздел: <a href="#" class="section-element section-element_blue">Товарищи</a><br />
-              <span class="anecdotes__anecdote">&mdash; Товарищ, проснитесь, вы наверстали!
-              </span>
+              <span class="anecdotes__anecdote">&mdash; Товарищ, проснитесь, вы наверстали!</span>
             </div>
 
             <div class="anecdotes__item section-items__item">
@@ -263,10 +320,10 @@
             <div class="anecdotes__item section-items__item">
               Раздел: <a href="#" class="section-element section-element_blue">Мамы</a><br />
               <span class="anecdotes__anecdote">Прибегает заплаканная девочка к маме, и сквозь слезы говорит:
-              —Мам, мам, а что все на улице говорят, что у меня лицо на жопу похоже?
-              —У тебя прекрасное личико, они шутят так-успокаивает мама
-              Девочка радостная убегает. Бежит по улице, видит люк канализационный открыт, заглядывает
-              туда, а от туда крик: &quot;не сраааать!&quot;
+                —Мам, мам, а что все на улице говорят, что у меня лицо на жопу похоже?
+                —У тебя прекрасное личико, они шутят так-успокаивает мама
+                Девочка радостная убегает. Бежит по улице, видит люк канализационный открыт, заглядывает
+                туда, а от туда крик: &quot;не сраааать!&quot;
               </span>
             </div>
 
@@ -305,11 +362,10 @@
       </div>
 
       <div class="main__second-column">
-        <section class="main__sub-section">
+        <section class="tv main__sub-section">
           <a href="#" class="title main__section-title">
             Телепрограмма
           </a>
-
 
           <div class="section-items">
             <a href="#" class="section-items__item">
@@ -386,7 +442,7 @@
           </div>
         </section>
 
-        <section class="main__sub-section">
+        <section class="automobiles main__sub-section">
           <a href="#" class="title main__section-title">
             Автомобильные новости
           </a>
@@ -429,7 +485,8 @@
               </a>
 
               <a href="#" class="section-items__item">
-                Но думаю это был гуманитарный интерес, мне нравилась их форма и то, как я мог расставлять их везде
+                Но думаю это был гуманитарный интерес, мне нравилась их форма и то, как я мог
+                расставлять их везде
                 <span class="section-element section-element_grey section-element_small">
                   15:14
                 </span>
@@ -440,7 +497,7 @@
       </div>
 
       <div class="main__third-column">
-        <section class="main__sub-section">
+        <section class="weather main__sub-section">
           <a href="#" class="title main__section-title">
             Погода
             <span class="weather-icon"></span>
@@ -453,7 +510,7 @@
           </div>
         </section>
 
-        <section class="main__sub-section">
+        <section class="traffics main__sub-section">
           <a href="#" class="title main__section-title">
             Пробки
             <span class="car-icon"></span>
@@ -465,7 +522,7 @@
           </div>
         </section>
 
-        <section class="main__sub-section">
+        <section class="map main__sub-section">
           <a href="#" class="title">
             Карта Екатеринбурга
           </a>
@@ -491,7 +548,7 @@
           </div>
         </section>
 
-        <section class="main__sub-section">
+        <section class="handbill main__sub-section">
           <a href="#" class="title main__section-title">
             Афиша
           </a>
