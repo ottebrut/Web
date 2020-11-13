@@ -1,22 +1,22 @@
 @font-face {
+  font-display: swap;
   font-family: 'YS Text';
   font-weight: 400;
-  src: url(//yastatic.net/s3/home/fonts/ys/1/text-regular.woff2) format('woff2'),
-    url(//yastatic.net/s3/home/fonts/ys/1/text-regular.woff) format('woff');
+  src: url(https://yastatic.net/s3/home/fonts/ys/1/text-regular.woff2) format('woff2');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'YS Text';
   font-weight: 500;
-  src: url(//yastatic.net/s3/home/fonts/ys/1/text-medium.woff2) format('woff2'),
-    url(//yastatic.net/s3/home/fonts/ys/1/text-medium.woff) format('woff');
+  src: url(https://yastatic.net/s3/home/fonts/ys/1/text-medium.woff2) format('woff2');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'YS Text';
   font-weight: 700;
-  src: url(//yastatic.net/s3/home/fonts/ys/1/text-bold.woff2) format('woff2'),
-    url(//yastatic.net/s3/home/fonts/ys/1/text-bold.woff) format('woff');
+  src: url(https://yastatic.net/s3/home/fonts/ys/1/text-bold.woff2) format('woff2');
 }
 
 :root {
@@ -307,6 +307,8 @@ a:hover {
 
   grid-column-end: span all;
   grid-column-start: 1;
+
+  margin-top: 30px;
 }
 
 .search-container__logo {
